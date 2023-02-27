@@ -20,7 +20,4 @@ public abstract class PaymentCard implements IChargable{
         return this.securityNumber;
     }
 
-    public String logTransaction(){
-        return "Transaction Logged";
-    }
 }

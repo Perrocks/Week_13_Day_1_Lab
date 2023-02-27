@@ -9,11 +9,13 @@ public class CreditCard extends PaymentCard{
     public double getAvailableCredit(){
         return availableCredit;
     }
-
     public double chargeCard(double amountToCharge){
-        return availableCredit -= amountToCharge;
+        double adjustedAmountToCharge = amountToCharge * 20 / 100 + amountToCharge;
+        double newAvailableCredit = availableCredit -= adjustedAmountToCharge;
+        String creditLogMessage = "Your total available credit is now" + " " + newAvailableCredit;
+        System.out.println(creditLogMessage);
+        return newAvailableCredit;
     }
-
 
 
 }

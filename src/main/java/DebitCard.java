@@ -24,6 +24,9 @@ public class DebitCard extends PaymentCard{
     }
 
     public double chargeCard(double amountToCharge){
-        return debitCardBalance -= amountToCharge;
+       double newBalance = debitCardBalance -= amountToCharge;
+       String debitLogMessage = "Your new balance is" + " " + newBalance;
+       System.out.println(debitLogMessage);
+        return newBalance;
     }
 }

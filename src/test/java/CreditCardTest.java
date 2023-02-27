@@ -32,4 +32,9 @@ public class CreditCardTest {
     public void canGetSecurityNumber(){
         assertEquals(567, creditCard.getSecurityNumber());
     }
+
+    @Test
+    public void canChargeCreditCard(){
+        assertEquals(200, creditCard.chargeCard(250.00), 0.0);
+    }
 }

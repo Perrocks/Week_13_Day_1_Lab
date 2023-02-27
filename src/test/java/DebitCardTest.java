@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.smartcardio.Card;
+
 import static org.junit.Assert.assertEquals;
 
 public class DebitCardTest {
@@ -40,4 +42,10 @@ public class DebitCardTest {
     public void canGetDebitCardBalance() {
         assertEquals(356.12, debitCard.getDebitCardBalance(),0.0);
     }
+    @Test
+    public void canChargeDebitCard(){
+        assertEquals(206.12, debitCard.chargeCard(150.00), 0.0);
+    }
+
+
 }
